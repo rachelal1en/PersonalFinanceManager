@@ -36,12 +36,11 @@ class ChangeCalculator:
                 f"  Which is: {total_dollars} dollars and {remaining_cents} cents ({format_currency(total_dollars + remaining_cents / 100)})\n")
 
             # Prompt to add more change or exit
-            while True:
-                user_choice = input("Do you have more change to calculate? (y/n): ").strip().lower()
-                if user_choice == "n":
-                    break
-                elif user_choice != "y":
-                    print("Invalid choice. Please enter 'y' or 'n'.")
+            user_choice = input("Do you have more change to calculate? (y/n): ").strip().lower()
+            if user_choice == "n":
+                break
+            elif user_choice != "y":
+                print("Invalid choice. Please enter 'y' or 'n'.")
 
         # Final Summary
         print("\nThanks for using the Change Calculator!")
